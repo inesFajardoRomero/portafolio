@@ -1,12 +1,4 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-/*Já deixaremos o básico de reset de estilos. Caso queira adicionar mais informações
-coloque nas sessões indicadas*/
-
 :root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
    --cor-de-fundo: #F5F5F5;
    --cor-de-link: #000;
 }
@@ -18,11 +10,12 @@ body {
     font-size: 12px;
     margin: 0;
     padding:0;
-    line-height: 1.3;
 }
+
 ol, ul,li {
     list-style: none;
 }
+
 a{
     text-decoration: none;
     color: var(--cor-de-link);
@@ -79,20 +72,6 @@ section{
     font-size: 20px;
 }
 
-
-.academic__courses__box ul{
-    padding: 0;
-}
-
-.academic__courses__item__title, .academic__courses__item__subtitle{
-    line-height: 0;
-}
-
-
-
-
-
-
 .formcontato__text{
     display: flex;
     justify-content: center;
@@ -116,14 +95,12 @@ section{
     background: none;
     color: #2A7AE4;
     height: 40px;
-    width: 30%;
 }
 
 .experience__botao--demo{
     border: 1px solid #2A7AE4 ;
     background: #2A7AE4;
     color: white;
-    width: 30%;
     height: 40px;
 }
 
@@ -174,9 +151,318 @@ input, textarea{
     margin: 0;
 }
 
+/* Media query para pantallas de móvil */
+@media (max-width: 767px) {
+    /* Ajustes específicos para pantallas móviles */
+    body {
+        font-size: 14px; /* Ejemplo de ajuste de tamaño de fuente */
+    }
+    
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .menu__header{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        white-space: nowrap;
+    }
 
+    .navmenu{
+        display: flex;
+        align-items: center;
+    }
 
-@media (max-width: 1920px) /*and (min-width: 1008px)*/{
+    .menu__list__item{
+        display: none;
+    }
+
+    .menu__list__item__contato{
+        display: flex;
+    }
+
+    .title__profile{
+        width: 20%;
+    }
+
+    .title__network{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    .skills, .hobbies{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills__line, .hobbies__line{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin:0 1rem;
+        gap:10px
+    }
+        .academic__courses__box{
+    margin: 2.5rem 1.5rem;
+}
+
+    .academic__courses__item__img img{
+        width: 40%;
+        margin: 2rem;
+    }
+ 
+    .academic__courses__item__img{
+        background-color:white;
+        text-align: center;         
+    }
+
+    .skills__box, .hobbies__box{
+        display: flex;
+        align-items:flex-end;
+        background-color:white;
+        width: 48%;
+        height: 118px;
+    }
+
+    .skills__box ul, .hobbies__box ul{
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+       
+    }
+    
+    .experience__description{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .experiencia__botao--repo, .experience__botao--demo{
+       width: 100%;
+    }
+
+    .formcontato__img{
+        display: none;
+    }
+}
+
+/* Media query para pantallas de tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .menu, .title__div, .academic_container, .about__container, .experience_container, .formcontato__contacto{
+        margin: 0 2rem;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+    
+    .menu__header{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    .navmenu{
+        display: flex;
+        align-items: center;
+    }
+
+    .menu__list__item{
+        display: none;
+    }
+
+    .menu__list__item__contato{
+        display: flex;
+    }
+
+    .title__div{
+        margin-top:3rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap:5px
+
+    }
+
+    .title__bio{
+        font-size: 22px;
+    }
+
+    .title__subsection{
+        font-size: 16px;
+    }
+
+    .title__profile{
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
+        width: 24.33%;
+    }
+
+    .title__network{
+        display: flex;
+        justify-content: flex-start;
+        gap: 40px;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    
+    .about__container{
+        margin-top:1rem;
+        margin-bottom:2rem;
+        font-size: 14px;
+    }
+
+    .about__title{
+        font-size: 22px;  
+    }
+
+    .skills, .hobbies{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .skills__line, .hobbies__line{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:20px
+    }
+    .skills__box, .hobbies__box{
+        display: flex;
+        align-items:flex-end;
+        background-color:white;
+        width: 28%;
+        height: 118px;
+    }
+
+    .skills__box ul, .hobbies__box ul{
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        padding: 0;
+       
+    }
+
+   .academic_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .academic__courses{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .academic__courses__box{
+        width: 50%;
+    }
+    
+    .academic__courses__list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+    .academic__courses__item__img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        height: 118px;
+    }
+
+    .academic__courses__item__img img{
+        width: 50%;
+    }
+
+    .academic__courses__item__title{
+        height: 32px;
+    }
+
+    .academic__courses__item__subtitle p{
+        margin-top: 0;
+    }
+
+    .academic__courses__item__title h4{
+        margin-top: 5px 0;
+    }
+/*
+    .experience_container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .experiencie__box:nth-child(even){
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .experiencie__box:nth-child(odd){
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .experience__info{
+        width: 20%;
+    }
+
+    .experience__img{
+        width: 80%;
+        height: 406px;
+    }
+    
+    .formcontato__contacto{
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .formcontato__text{
+        width: 100%;
+    }
+
+    .formcontato__img{
+        display: flex;
+    }
+
+    input:focus{
+        border-bottom: #2A7AE4;
+    }*/
+}
+
+/* Media query para pantallas de escritorio */
+@media (min-width: 1024px) {
+    /* Ajustes específicos para pantallas de escritorio */
+    body {
+        font-size: 18px; /* Ejemplo de ajuste de tamaño de fuente */
+    }
     
     .menu, .title__div,  .about__container, .experience_container, .formcontato__contacto{
         margin: 0 10rem;
@@ -199,7 +485,7 @@ input, textarea{
     .menu__list{
         display: flex;
         justify-content: space-between;
-        gap: 50px;
+        gap: 20px;
     }
 
     .menu__list__item{
@@ -365,107 +651,11 @@ input, textarea{
     input:focus{
         border-bottom: #2A7AE4;
     }
-}
 
-/*@media (min-width: 425px) {
-    .menu{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+    .academic__courses__item__title, .academic__courses__item__subtitle{
+        line-height: 0;
     }
     
-    .menu__header{
-        display: flex;
-        gap: 10px;
-        align-items: center;
-        white-space: nowrap;
-    }
-
-    .navmenu{
-        display: flex;
-        align-items: center;
-    }
-
-    .menu__list__item{
-        display: none;
-    }
-
-    .menu__list__item__contato{
-        display: flex;
-    }
-
-    .title__profile{
-        width: 20%;
-    }
-
-    .title__network{
-        display: flex;
-        justify-content: space-between;
-        padding: 0;
-    }
-    .skills, .hobbies{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skills__line, .hobbies__line{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin:0 1rem;
-        gap:10px
-    }
-        .academic__courses__box{
-    margin: 2.5rem 1.5rem;
 }
 
-    .academic__courses__item__img img{
-        width: 40%;
-        margin: 2rem;
-    }
- 
-    .academic__courses__item__img{
-        background-color:white;
-        text-align: center;         
-    }
 
-    .skills__box, .hobbies__box{
-        display: flex;
-        align-items:flex-end;
-        background-color:white;
-        width: 48%;
-        height: 118px;
-    }
-
-    .skills__box ul, .hobbies__box ul{
-        padding-left: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items:center;
-       
-    }
-        .experience__description{
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-}
-
-.experiencia__botao--repo{
-    border: 1px solid #2A7AE4 ;
-    background: none;
-    color: #2A7AE4;
-    height: 40px;
-}
-
-.experience__botao--demo{
-    border: 1px solid #2A7AE4 ;
-    background: #2A7AE4;
-    color: white;
-    height: 40px;
-}
-
-    .formcontato__img{
-        display: none;
-    }
-}*/

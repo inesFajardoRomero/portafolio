@@ -575,6 +575,10 @@ input:focus{
         font-size: 22px;
     }
 
+    .title__container{
+        width: 70%;
+    }
+
     .about__container{
         display: flex;
         justify-content: space-evenly;
